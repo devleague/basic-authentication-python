@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, render_template
 from functools import wraps
 app = Flask(__name__)
 
@@ -25,5 +25,5 @@ def requires_auth(f):
 def login():
     return render_template('login.html')
 
-if __name__=='__main__':
-    app.run(host = '10.0.1.72', port = 80)
+if __name__ == '__main__':
+    app.run(host='0.0.0.0')
